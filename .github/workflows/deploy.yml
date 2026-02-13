@@ -1,18 +1,24 @@
 name: Deploy Mule App
+
 on:
   push:
     branches:
       - main
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-steps:
+
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
+          distribution: 'temurin'
           java-version: '17'
+
       - name: Build and Deploy
         run: mvn clean deploy -DskipTests
         env:
