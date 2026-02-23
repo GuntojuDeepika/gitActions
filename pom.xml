@@ -25,6 +25,12 @@
 				<version>3.2.0</version>
 			</plugin>
 			<plugin>
+			    <groupId>org.mule.tools.maven</groupId>
+			    <artifactId>exchange-mule-maven-plugin</artifactId>
+			    <version>0.1.4</version>
+			</plugin>
+			
+			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
@@ -33,7 +39,7 @@
 			    <cloudHubDeployment>
 			      <applicationName>test-ci-cd</applicationName>
 			      <environment>Design</environment>
-			      <region>Cloudhub-EU-West-2</region>
+			      <region>us-east-2</region>
 			      <workers>1</workers>
 			      <workerType>MICRO</workerType>
 			      <businessGroup>GAC Digital</businessGroup>
